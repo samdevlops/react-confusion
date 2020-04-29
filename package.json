@@ -6,9 +6,12 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "bootstrap": "^4.4.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "^2.1.8"
+    "react-popper": "^2.2.3",
+    "react-scripts": "^2.1.8",
+    "reactstrap": "^8.4.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -30,5 +33,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "lite-server": "^2.5.4"
   }
 }
