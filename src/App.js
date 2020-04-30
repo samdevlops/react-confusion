@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import {Navbar, NavbarBrand} from 'reactstrap';
 import './App.css';
 import { DISHES } from './shared/dishes'
 import Menu from './components/MenuComponent';
+import DishDetail from './components/DishdetailComponent';
 
 
 class App extends Component{
