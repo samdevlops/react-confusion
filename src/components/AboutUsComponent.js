@@ -22,7 +22,7 @@ function RenderLeader({leader}) {
 
 function About(props) {
 
-    //Task 2 , Here leaders is calling Render Leader Component and passing leader as props
+    //Task 2 , Here leaders is calling Render Leader Component and passing leader as props``````````
     const leaders = props.leaders.map((leader) => {
         return (
             <RenderLeader leader={leader}/>
