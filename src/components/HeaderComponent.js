@@ -28,7 +28,7 @@ class Header extends Component{
 
     handleLogin(event){
         this.toggleModal();
-        alert("Username :"+this.username.value + "Paasword :"+this.password.value +"Remember :"+this.remember.checked);
+        alert("Username :"+this.username.value + " Paasword :"+this.password.value +" Remember :"+this.remember.checked);
         event.preventDefault();
     }
 
@@ -67,7 +67,7 @@ class Header extends Component{
                         <Nav className="ml-auto" navbar>
                             <NavItem>
                                 <Button outline onClick={this.toggleModal}>
-                                    <span className="fa fa-sign-in fa-lg"></span>Login
+                                    <span className="fa fa-sign-in fa-lg"></span> Login
                                 </Button>
                             </NavItem>
                         </Nav>
@@ -77,7 +77,7 @@ class Header extends Component{
             <Jumbotron>
                 <div className="container">
                     <div className="row row-header">
-                        <div className="col-12 col-sm-6">
+                        <div className="col-12 col-md-6">
                             <h1>Ristorante Con Fusion</h1>
                             <p>We take inspiration from the World's best cusines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinery senses!</p>
                         </div>
