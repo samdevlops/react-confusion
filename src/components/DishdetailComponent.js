@@ -23,7 +23,8 @@ class CommentForm extends Component{
 
     handleSubmit(values) {
         console.log(" Current State is :" +JSON.stringify(values));
-        alert(" Current State is :" +JSON.stringify(values));
+        //alert(" Current State is :" +JSON.stringify(values));
+        this.props.addComment(this.props.dishId, values.rating, values.author, values.comment);
     }
 
    
@@ -62,8 +63,8 @@ class CommentForm extends Component{
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
-                         <option>4</option>
-                         <option>5</option>
+                        <option>4</option>
+                        <option>5</option>
                     </Input>
                     </Col>
                 </Row>
@@ -73,7 +74,7 @@ class CommentForm extends Component{
                 <Row className="form-group">
                     
                     <Col md={12}>
-                        <Control.text model=".firstname" id="firstname" name="firstname"
+                        <Control.text model=".author" id="author" name="author"
                              placeholder="Your Name"
                              className="form-control"
                              validators={{
@@ -82,7 +83,7 @@ class CommentForm extends Component{
                         />
                          <Errors
                              className="text-danger"
-                                model=".firstname"
+                                model=".author"
                                  show="touched"
                                  messages={{
                                   required: 'Required',
@@ -128,7 +129,7 @@ class CommentForm extends Component{
         );
     }
 
-    function RenderComments({comments}) {
+    function RenderComments({comments, addComment, dishId}) {
         var commentList = comments.map(comment => {
             return (
                 <li key={comment.id} >
@@ -147,7 +148,7 @@ class CommentForm extends Component{
                     {commentList}
                 </ul>
                 <ul>
-                <CommentForm/>
+                <CommentForm dishId={dishId} addComment={addComment}/>
                 </ul>
             </div>
         );
@@ -173,7 +174,10 @@ class CommentForm extends Component{
                         <RenderDish dish={props.dish} />
                     </div>
                     <div className="col-12 col-md-5 m-1">
-                        <RenderComments comments={props.comments} />
+                        <RenderComments comments={props.comments} 
+                        addComment = {props.addComment}
+                        dishId ={props.dish.id}
+                        />
                         
                     </div>
                 </div>
